@@ -95,7 +95,16 @@ public class LinkedList<Data> implements Iterable<Data> {
 
     /* Delete an element from a linked list by index (0-index) */
     public void remove(int index) {
-        // your code
+
+        if(index == 0) {
+            head = head.next;
+        } else{
+            Node<Data> current = head;
+            for(int i = 0; i < index - 1; i++){
+                current = current.next;
+            }
+            current.next = current.next.next;
+        }
     }
 
     public void reverse() {
