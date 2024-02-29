@@ -12,7 +12,17 @@ public class DoublyLinkedList<Data> implements Iterable<Data> {
 
     /* Add a new node to the front of the doubly linked list */
     public void addToFront(Data data) {
-        // your code
+        DoubleNode<Data> newNode = new DoubleNode<>();
+        newNode.data = data;
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
+        size++;
     }
 
     /* Remove a node from the front of the doubly linked list */

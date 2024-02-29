@@ -3,7 +3,11 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        linkedListDemo();
+        //linkedListDemo();
+        DoublyLinkedList<Integer> myList = new DoublyLinkedList<>();
+        myList.addToFront(2);
+        myList.addToFront(4);
+        myList.addToFront(5);
     }
 
     private static void linkedListDemo() {
